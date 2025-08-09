@@ -1,6 +1,6 @@
 import pygame,sys,random, winsound
 
-pygame.mixer.pre_init(44100, -16, 2, 2048)
+pygame.mixer.pre_init(44100,  16, 2, 2048)
 pygame.mixer.init()
 pygame.init()
 
@@ -9,7 +9,6 @@ font = pygame.font.Font("SERIO___.TTF",18)
 
 
 
-#--------------------------------------------------------------------------------------------------------------------
 class Sun(pygame.sprite.Sprite):
     score = None
     def __init__(self,anim,x,y,speed):
@@ -2055,26 +2054,10 @@ menu = Window()
 
 #Boom die zombie animation
 zombie_boom_anim = []
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_0.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_1.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_2.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_3.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_4.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_5.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_6.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_7.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_8.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_9.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_10.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_11.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_12.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_13.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_14.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_15.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_16.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_17.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_18.png").convert_alpha())
-zombie_boom_anim.append(pygame.image.load("zombies/NormalZombie/BoomDie/BoomDie_19.png").convert_alpha())
+for i in range(20):  
+    path = f"zombies/NormalZombie/BoomDie/BoomDie_{i}.png"
+    zombie_boom_anim.append(pygame.image.load(path).convert_alpha())
+
 
 
 
@@ -2088,172 +2071,67 @@ bomb_wallnut_anim.append(pygame.image.load("plants/WallNut/RedWallNutBowling/Red
 
 #Sun animation
 sun_anim = []
-sun_anim.append(pygame.image.load("plants/Sun/Sun_0.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_1.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_2.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_3.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_4.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_5.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_6.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_7.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_8.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_9.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_10.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_11.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_12.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_13.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_14.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_15.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_16.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_17.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_18.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_19.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_20.png").convert_alpha())
-sun_anim.append(pygame.image.load("plants/Sun/Sun_21.png").convert_alpha())
+for i in range(22):  
+    path = f"plants/Sun/Sun_{i}.png"
+    sun_anim.append(pygame.image.load(path).convert_alpha())
 
 #Animations Peashooter--------------------------------------------------------------------------------------------------------------------
 peashooter_anim = []
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_0.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_1.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_2.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_3.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_4.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_5.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_6.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_7.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_8.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_9.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_10.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_11.png").convert_alpha())
-peashooter_anim.append(pygame.image.load("plants/Peashooter/Peashooter_12.png").convert_alpha())
+for i in range(13):  
+    path = f"plants/Peashooter/Peashooter_{i}.png"
+    peashooter_anim.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Repeater Pea-----------------------------------------------------------------------------------------------------------------
 repeaterpea_anim = []
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_0.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_1.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_2.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_3.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_3.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_4.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_5.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_6.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_7.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_8.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_9.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_10.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_11.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_12.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_13.png").convert_alpha())
-repeaterpea_anim.append(pygame.image.load("plants/RepeaterPea/RepeaterPea_14.png").convert_alpha())
+for i in range(15):
+    path = f"plants/RepeaterPea/RepeaterPea_{i}.png"
+    repeaterpea_anim.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Sunflower--------------------------------------------------------------------------------------------------------------------
 sunflower_anim = []
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_0.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_1.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_2.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_3.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_4.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_5.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_6.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_7.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_8.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_9.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_10.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_11.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_12.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_13.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_14.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_15.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_16.png").convert_alpha())
-sunflower_anim.append(pygame.image.load("plants/SunFlower/SunFlower_17.png").convert_alpha())
+for i in range(18):
+    path = f"plants/SunFlower/SunFlower_{i}.png"
+    sunflower_anim.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Snowpea--------------------------------------------------------------------------------------------------------------------
 snowpea_anim = []
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_0.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_1.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_2.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_3.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_4.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_5.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_6.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_7.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_8.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_9.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_10.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_11.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_12.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_13.png").convert_alpha())
-snowpea_anim.append(pygame.image.load("plants/SnowPea/SnowPea_14.png").convert_alpha())
+for i in range(15):
+    path = f"plants/SnowPea/SnowPea_{i}.png"
+    snowpea_anim.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Wallnut--------------------------------------------------------------------------------------------------------------------
 wallnut_anim_0 = []
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_0.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_1.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_2.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_3.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_4.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_5.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_6.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_7.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_8.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_9.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_10.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_11.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_12.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_13.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_14.png").convert_alpha())
-wallnut_anim_0.append(pygame.image.load("plants/WallNut/WallNut/WallNut_15.png").convert_alpha())
+for i in range(16):
+    path = f"plants/WallNut/WallNut/WallNut_{i}.png"
+    wallnut_anim_0.append(pygame.image.load(path).convert_alpha())
 
 
 #Animations Wallnut Cracked 1--------------------------------------------------------------------------------------------------------------------
 wallnut_anim_1 = []
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_0.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_1.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_1.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_2.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_3.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_3.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_4.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_5.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_5.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_6.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_7.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_7.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_8.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_9.png").convert_alpha())
-wallnut_anim_1.append(pygame.image.load("plants/WallNut/WallNut_cracked1/WallNut_cracked1_10.png").convert_alpha())
+for i in range(11):
+    path = f"plants/WallNut/WallNut_cracked1/WallNut_cracked1_{i}.png"
+    wallnut_anim_1.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Wallnut Cracked 2--------------------------------------------------------------------------------------------------------------------
 wallnut_anim_2 = []
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_0.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_1.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_2.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_3.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_4.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_5.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_6.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_7.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_8.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_9.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_10.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_11.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_12.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_13.png").convert_alpha())
-wallnut_anim_2.append(pygame.image.load("plants/WallNut/WallNut_cracked2/WallNut_cracked2_14.png").convert_alpha())
+for i in range(15):
+    path = f"plants/WallNut/WallNut_cracked2/WallNut_cracked2_{i}.png"
+    wallnut_anim_2.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Potato Mine Initialising--------------------------------------------------------------------------------------------------------------------
 potatomine_anim_0 = [pygame.image.load("plants/PotatoMine/PotatoMineInit/PotatoMineInit_0.png").convert_alpha()]
 
 #Animations Potato Mine Primed--------------------------------------------------------------------------------------------------------------------
 potatomine_anim_1 = []
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_0.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_1.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_2.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_3.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_4.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_5.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_6.png").convert_alpha())
-potatomine_anim_1.append(pygame.image.load("plants/PotatoMine/PotatoMine/PotatoMine_7.png").convert_alpha())
+for i in range(8):
+    path = f"plants/PotatoMine/PotatoMine/PotatoMine_{i}.png"
+    potatomine_anim_1.append(pygame.image.load(path).convert_alpha())
 
 #Animations Potato Mine Explosion--------------------------------------------------------------------------------------------------------------------
 potatomine_anim_2 = []
@@ -2261,222 +2139,87 @@ potatomine_anim_2.append(pygame.image.load("plants/PotatoMine/PotatoMineExplode/
 
 #Animations Cherry Bomb Explosion--------------------------------------------------------------------------------------------------------------------
 cherrybomb_anim_1 = []
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_0.png").convert_alpha())
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_1.png").convert_alpha())
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_2.png").convert_alpha())
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_3.png").convert_alpha())
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_4.png").convert_alpha())
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_5.png").convert_alpha())
-cherrybomb_anim_1.append(pygame.image.load("plants/CherryBomb/CherryBomb_6.png").convert_alpha())
+for i in range(7):
+    path = f"plants/CherryBomb/CherryBomb_{i}.png"
+    cherrybomb_anim_1.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Chomper Idle
 chomper_anim_0 = []
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_0.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_1.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_2.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_3.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_4.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_5.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_6.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_7.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_8.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_9.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_10.png").convert_alpha())
-chomper_anim_0.append(pygame.image.load("plants/Chomper/Chomper/Chomper_12.png").convert_alpha())
+for i in range(12):
+    path = f"plants/Chomper/Chomper/Chomper_{i}.png"
+    chomper_anim_0.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Chomper Attack
 chomper_anim_1 = []
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_0.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_1.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_2.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_3.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_4.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_5.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_6.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_7.png").convert_alpha())
-chomper_anim_1.append(pygame.image.load("plants/Chomper/ChomperAttack/ChomperAttack_8.png").convert_alpha())
+for i in range(9):
+    path = f"plants/Chomper/ChomperAttack/ChomperAttack_{i}.png"
+    chomper_anim_1.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Chomper Digest
 chomper_anim_2 = []
-chomper_anim_2.append(pygame.image.load("plants/Chomper/ChomperDigest/ChomperDigest_0.png").convert_alpha())
-chomper_anim_2.append(pygame.image.load("plants/Chomper/ChomperDigest/ChomperDigest_1.png").convert_alpha())
-chomper_anim_2.append(pygame.image.load("plants/Chomper/ChomperDigest/ChomperDigest_2.png").convert_alpha())
-chomper_anim_2.append(pygame.image.load("plants/Chomper/ChomperDigest/ChomperDigest_3.png").convert_alpha())
-chomper_anim_2.append(pygame.image.load("plants/Chomper/ChomperDigest/ChomperDigest_4.png").convert_alpha())
-chomper_anim_2.append(pygame.image.load("plants/Chomper/ChomperDigest/ChomperDigest_5.png").convert_alpha())
+for i in range(6):
+    path = f"plants/Chomper/ChomperDigest/ChomperDigest_{i}.png"
+    chomper_anim_2.append(pygame.image.load(path).convert_alpha())
+
 
 #Animations Normal Zombie Walking--------------------------------------------------------------------------------------------------------------------
 zombie_anim_0 = []
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_0.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_1.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_2.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_3.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_4.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_5.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_6.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_7.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_8.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_9.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_10.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_11.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_12.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_13.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_14.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_15.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_16.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_17.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_18.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_19.png").convert_alpha())
-zombie_anim_0.append(pygame.image.load("zombies/NormalZombie/Zombie/Zombie_20.png").convert_alpha())
+for i in range(21):
+    path = f"zombies/NormalZombie/Zombie/Zombie_{i}.png"
+    zombie_anim_0.append(pygame.image.load(path).convert_alpha())
 
-#Animations Normal Zombie Attacking--------------------------------------------------------------------------------------------------------------------
+
+#Animations Normal Zombie Attacking
 zombie_anim_attack = []
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_0.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_1.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_2.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_3.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_4.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_5.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_6.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_7.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_8.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_9.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_10.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_11.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_12.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_13.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_14.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_15.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_16.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_17.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_18.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_19.png").convert_alpha())
-zombie_anim_attack.append(pygame.image.load("zombies/NormalZombie/ZombieAttack/ZombieAttack_20.png").convert_alpha())
+for i in range(21):
+    path = f"zombies/NormalZombie/ZombieAttack/ZombieAttack_{i}.png"
+    zombie_anim_attack.append(pygame.image.load(path).convert_alpha())
 
-#Animations Normal Zombie Dying--------------------------------------------------------------------------------------------------------------------
+
+#Animations Normal Zombie Dying
 zombie_anim_death = []
-
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_0.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_1.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_2.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_3.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_4.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_5.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_6.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_7.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_8.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_10.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_11.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_12.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_13.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_14.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_15.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_16.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieLostHead_17.png").convert_alpha())
+for i in range(18):
+    path = f"zombies/NormalZombie/ZombieDie/ZombieLostHead_{i}.png"
+    zombie_anim_death.append(pygame.image.load(path).convert_alpha())
 
 
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_0.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_1.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_2.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_3.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_4.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_5.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_6.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_7.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_8.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
-zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
+# Append frames 0 to 8
+for i in range(9):
+    zombie_anim_death.append(pygame.image.load(f"zombies/NormalZombie/ZombieDie/ZombieDie_{i}.png").convert_alpha())
 
-#Animations Cone Zombie Walking--------------------------------------------------------------------------------------------------------------------
+# Append frame 9 multiple times 
+for _ in range(15):
+    zombie_anim_death.append(pygame.image.load("zombies/NormalZombie/ZombieDie/ZombieDie_9.png").convert_alpha())
+
+#Animations Cone Zombie Walking
 cone_zombie_anim_0 = []
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_0.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_1.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_2.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_3.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_4.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_5.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_6.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_7.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_8.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_9.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_10.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_11.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_12.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_13.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_14.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_15.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_16.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_17.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_18.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_19.png").convert_alpha())
-cone_zombie_anim_0.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_20.png").convert_alpha())
+
+for i in range(21):
+    cone_zombie_anim_0.append(pygame.image.load(f"zombies/ConeheadZombie/ConeheadZombie/ConeheadZombie_{i}.png").convert_alpha())
+
 
 #Animations Cone Zombie Attacking
 cone_zombie_anim_attack = []
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_0.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_1.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_2.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_3.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_4.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_5.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_6.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_7.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_8.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_9.png").convert_alpha())
-cone_zombie_anim_attack.append(pygame.image.load("zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_10.png").convert_alpha())
+
+for i in range(11):
+    cone_zombie_anim_attack.append(pygame.image.load(f"zombies/ConeheadZombie/ConeheadZombieAttack/ConeheadZombieAttack_{i}.png").convert_alpha())
+
 
 #Animations Bucket Zombie Walking
 bucket_zombie_anim_0 = []
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_0.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_1.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_2.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_3.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_4.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_5.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_6.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_7.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_8.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_9.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_10.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_11.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_12.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_13.png").convert_alpha())
-bucket_zombie_anim_0.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_14.png").convert_alpha())
 
-#Animations Bucket Zombie Attacking -----------------------
+for i in range(15):
+    bucket_zombie_anim_0.append(pygame.image.load(f"zombies/BucketheadZombie/BucketheadZombie/BucketheadZombie_{i}.png").convert_alpha())
+
+
+#Animations Bucket Zombie Attacking 
 bucket_zombie_anim_attack = []
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_0.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_1.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_2.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_3.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_4.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_5.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_6.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_7.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_8.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_9.png").convert_alpha())
-bucket_zombie_anim_attack.append(pygame.image.load("zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_10.png").convert_alpha())
+
+for i in range(11):
+    bucket_zombie_anim_attack.append(pygame.image.load(f"zombies/BucketheadZombie/BucketheadZombieAttack/BucketheadZombieAttack_{i}.png").convert_alpha())
+
 
 menu.run_menu()
